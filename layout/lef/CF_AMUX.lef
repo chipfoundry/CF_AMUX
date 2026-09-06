@@ -1,0 +1,185 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+MACRO CF_AMUX
+  CLASS BLOCK ;
+  ORIGIN 0 0 ;
+  FOREIGN CF_AMUX 0 0 ;
+  SIZE 59.37 BY 78.46 ;
+  PIN t2b_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 19.76 59.77 20.455 60.07 ;
+    END
+  END t2b_hv
+  PIN t2a_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 18.61 59.775 19.325 60.07 ;
+    END
+  END t2a_hv
+  PIN t2c_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 40.6 56.385 59.37 57.525 ;
+    END
+  END t2c_hv
+  PIN t2d_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 40.6 54.65 59.37 55.79 ;
+    END
+  END t2d_hv
+  PIN enpdb_hv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 8.5 20.68 15.615 21.01 ;
+    END
+  END enpdb_hv
+  PIN holdb_hv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 8.5 20.05 15.615 20.38 ;
+    END
+  END holdb_hv
+  PIN start_hv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 8.5 17.28 15.615 17.61 ;
+    END
+  END start_hv
+  PIN vda
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 8.5 20.01 15.715 21.43 ;
+    END
+  END vda
+  PIN vda_shield
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 8.5 17.79 15.715 19.21 ;
+    END
+  END vda_shield
+  PIN vnba
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 8.5 21.94 15.615 22.27 ;
+    END
+  END vnba
+  PIN vpbd
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 8.5 22.57 15.615 22.9 ;
+    END
+  END vpbd
+  PIN vpmp
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 8.5 23.83 15.615 24.16 ;
+    END
+  END vpmp
+  PIN vpwr
+    DIRECTION INPUT ;
+    USE POWER ;
+    PORT
+      LAYER met3 ;
+        RECT 15.515 23.2 15.615 23.53 ;
+        RECT 5 23.2 15.615 23.53 ;
+        RECT 5 23.125 8.1 23.605 ;
+        RECT 1.23 68.76 58.14 71.86 ;
+      LAYER met4 ;
+        RECT 5 0 8.1 78.46 ;
+        RECT 35 0 38.1 78.46 ;
+    END
+  END vpwr
+  PIN vssa
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 8.5 22.23 15.715 23.65 ;
+    END
+  END vssa
+  PIN sw_on_lv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 42.07 21.705 59.37 21.875 ;
+    END
+  END sw_on_lv
+  PIN vssa_shield
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 23.6 42.13 23.77 42.3 ;
+    END
+  END vssa_shield
+  PIN vgnd
+    DIRECTION INPUT ;
+    USE GROUND ;
+    PORT
+      LAYER met3 ;
+        RECT 15.515 21.31 15.615 21.64 ;
+        RECT 2.26 21.31 15.615 21.64 ;
+        RECT 2.26 21.31 2.74 67.06 ;
+        RECT 1.23 63.96 58.14 67.06 ;
+      LAYER met4 ;
+        RECT 20 0 23.1 78.46 ;
+        RECT 50 0 53.1 78.46 ;
+    END
+  END vgnd
+  PIN t1_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 15.86 41.48 17.445 42 ;
+    END
+  END t1_hv
+  OBS
+    LAYER li1 ;
+      RECT 0 0 59.37 78.46 ;
+    LAYER met1 ;
+      RECT 0 0 15 78.46 ;
+      RECT 44.37 0 59.37 21.705 ;
+      RECT 44.37 21.875 59.37 54.65 ;
+      RECT 44.37 55.79 59.37 56.385 ;
+      RECT 44.37 57.525 59.37 78.46 ;
+      RECT 15 0 44.37 15 ;
+      RECT 15 63.46 44.37 78.46 ;
+    LAYER met2 ;
+      RECT 0 0 15 78.46 ;
+      RECT 44.37 0 59.37 78.46 ;
+      RECT 15 0 44.37 15 ;
+      RECT 15 63.46 44.37 78.46 ;
+  END
+END CF_AMUX
+
+END LIBRARY

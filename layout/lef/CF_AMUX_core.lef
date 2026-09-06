@@ -1,0 +1,213 @@
+VERSION 5.8 ;
+BUSBITCHARS "[]" ;
+DIVIDERCHAR "/" ;
+
+PROPERTYDEFINITIONS
+  MACRO SDLpower STRING ;
+  MACRO SDLground STRING ;
+  MACRO SDLglobal STRING ;
+END PROPERTYDEFINITIONS
+
+MACRO CF_AMUX_core
+  CLASS BLOCK ;
+  ORIGIN 0 0 ;
+  FOREIGN CF_AMUX_core 0 0 ;
+  SIZE 29.37 BY 48.46 ;
+  PIN t2b_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 4.76 44.77 5.455 45.07 ;
+    END
+  END t2b_hv
+  PIN t2a_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 3.61 44.775 4.325 45.07 ;
+    END
+  END t2a_hv
+  PIN t2c_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 25.6 41.385 25.97 42.525 ;
+    END
+  END t2c_hv
+  PIN t2d_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 25.6 39.65 25.965 40.79 ;
+    END
+  END t2d_hv
+  PIN enpdb_hv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 5.68 0.615 6.01 ;
+    END
+  END enpdb_hv
+  PIN holdb_hv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 5.05 0.615 5.38 ;
+    END
+  END holdb_hv
+  PIN start_hv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 2.28 0.615 2.61 ;
+    END
+  END start_hv
+  PIN vda
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.515 5.01 0.715 6.43 ;
+    END
+  END vda
+  PIN vda_shield
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.515 2.79 0.715 4.21 ;
+    END
+  END vda_shield
+  PIN vnba
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 6.94 0.615 7.27 ;
+    END
+  END vnba
+  PIN vpbd
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 7.57 0.615 7.9 ;
+    END
+  END vpbd
+  PIN vpmp
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 8.83 0.615 9.16 ;
+    END
+  END vpmp
+  PIN vpwrd
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 8.2 0.615 8.53 ;
+    END
+  END vpwrd
+  PIN vssa
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met4 ;
+        RECT 0.515 7.23 0.715 8.65 ;
+    END
+  END vssa
+  PIN sw_on_lv
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 27.07 6.705 28.48 6.875 ;
+    END
+  END sw_on_lv
+  PIN vssa_shield
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 8.6 27.13 8.77 27.3 ;
+    END
+  END vssa_shield
+  PIN vssd
+    DIRECTION INPUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met3 ;
+        RECT 0.515 6.31 0.615 6.64 ;
+    END
+  END vssd
+  PIN t1_hv
+    DIRECTION INOUT ;
+    USE SIGNAL ;
+    PORT
+      LAYER met1 ;
+        RECT 0.86 26.48 2.445 27 ;
+    END
+  END t1_hv
+  PROPERTY SDLpower "vpwrd" ;
+  PROPERTY SDLground "vssd" ;
+  PROPERTY SDLglobal "" ;
+  OBS
+    LAYER li1 ;
+      RECT 0 0 29.37 48.46 ;
+    LAYER met1 ;
+      RECT 0 0 0.86 48.46 ;
+      RECT 0.86 0 2.445 26.48 ;
+      RECT 0.86 27 2.445 48.46 ;
+      RECT 2.445 0 3.61 48.46 ;
+      RECT 3.61 0 4.325 44.775 ;
+      RECT 3.61 45.07 4.325 48.46 ;
+      RECT 4.325 0 4.76 48.46 ;
+      RECT 4.76 0 5.455 44.77 ;
+      RECT 4.76 45.07 5.455 48.46 ;
+      RECT 5.455 0 8.6 48.46 ;
+      RECT 8.6 0 8.77 27.13 ;
+      RECT 8.6 27.3 8.77 48.46 ;
+      RECT 8.77 0 25.6 48.46 ;
+      RECT 25.6 0 25.965 39.65 ;
+      RECT 25.6 40.79 25.965 41.385 ;
+      RECT 25.6 42.525 25.965 48.46 ;
+      RECT 25.965 0 25.97 41.385 ;
+      RECT 25.965 42.525 25.97 48.46 ;
+      RECT 25.97 0 27.07 48.46 ;
+      RECT 27.07 0 28.48 6.705 ;
+      RECT 27.07 6.875 28.48 48.46 ;
+      RECT 28.48 0 29.37 48.46 ;
+    LAYER met2 ;
+      RECT 0 0 29.37 48.46 ;
+    LAYER met3 ;
+      RECT 0 0 0.515 48.46 ;
+      RECT 0.515 0 0.615 2.28 ;
+      RECT 0.515 2.61 0.615 5.05 ;
+      RECT 0.515 5.38 0.615 5.68 ;
+      RECT 0.515 6.01 0.615 6.31 ;
+      RECT 0.515 6.64 0.615 6.94 ;
+      RECT 0.515 7.27 0.615 7.57 ;
+      RECT 0.515 7.9 0.615 8.2 ;
+      RECT 0.515 8.53 0.615 8.83 ;
+      RECT 0.515 9.16 0.615 48.46 ;
+      RECT 0.615 0 29.37 48.46 ;
+    LAYER met4 ;
+      RECT 0 0 0.515 48.46 ;
+      RECT 0.515 0 0.715 2.79 ;
+      RECT 0.515 4.21 0.715 5.01 ;
+      RECT 0.515 6.43 0.715 7.23 ;
+      RECT 0.515 8.65 0.715 48.46 ;
+      RECT 0.715 0 29.37 48.46 ;
+  END
+END CF_AMUX_core
+
+END LIBRARY

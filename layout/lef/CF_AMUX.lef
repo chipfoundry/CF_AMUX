@@ -12,7 +12,7 @@ MACRO CF_AMUX
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 19.76 59.77 20.455 60.07 ;
+        RECT 19.76 59.75 20.455 60.09 ;
     END
   END t2b_hv
   PIN t2a_hv
@@ -20,7 +20,7 @@ MACRO CF_AMUX
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 18.61 59.775 19.325 60.07 ;
+        RECT 18.61 59.755 19.325 60.095 ;
     END
   END t2a_hv
   PIN t2c_hv
@@ -138,7 +138,7 @@ MACRO CF_AMUX
     USE SIGNAL ;
     PORT
       LAYER met1 ;
-        RECT 23.6 42.13 23.77 42.3 ;
+        RECT 23.515 41.97 23.855 42.46 ;
     END
   END vssa_shield
   PIN vgnd
@@ -147,7 +147,7 @@ MACRO CF_AMUX
     PORT
       LAYER met3 ;
         RECT 15.515 21.31 15.615 21.64 ;
-        RECT 2.26 21.31 15.615 21.64 ;
+        RECT 2.26 21.31 15.725 21.645 ;
         RECT 2.26 21.31 2.74 67.06 ;
         RECT 1.23 63.96 58.14 67.06 ;
       LAYER met4 ;

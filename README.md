@@ -2,7 +2,7 @@
 
 > Analog Mux / Switch
 
-Draft for designer review. The public GDS is an abstract; ChipFoundry
+The public GDS is an abstract; ChipFoundry
 substitutes protected full geometry at tapeout.
 
 This package ships an SRAM-style PG wrap `CF_AMUX` around analog leaf
@@ -22,14 +22,7 @@ shields stay wrap ports and are routed as signals.
 
 ```bash
 pip install cf-ipm
-ipm install CF_AMUX --version 0.2.0 --include-drafts
-```
-
-Until the marketplace listing is published, install from a local catalog
-override:
-
-```bash
-ipm install CF_AMUX --version 0.2.0 --include-drafts --local-file ip/catalog.json
+ipm install CF_AMUX --version 0.2.1
 ```
 
 Use `hdl/gl/CF_AMUX.v` as the customer blackbox, `layout/lef/CF_AMUX.lef`
@@ -38,6 +31,8 @@ public wrap. `CF_AMUX_core` is the analog leaf (empty Verilog, pin-only
 abstract). ChipFoundry substitutes vault GDS into `CF_AMUX_core` at tapeout.
 P&R uses the wrap LEF (`vpwr` / `vgnd` for chip PDN).
 
+Functional sim compiles `verify/beh_model/CF_AMUX_core.v` **instead of** the empty `hdl/gl/CF_AMUX_core.v` stub. See `verify/beh_model/README.md`.
+
 ## Features
 
 - Analog terminals `t1_hv` and `t2a_hv` / `t2b_hv` / `t2c_hv` / `t2d_hv`
@@ -45,6 +40,7 @@ P&R uses the wrap LEF (`vpwr` / `vgnd` for chip PDN).
 - High-voltage sequence controls `start_hv` / `holdb_hv` / `enpdb_hv`
 - Analog supplies `vda` / `vssa` and pump `vpmp` (wrap signal ports)
 - Analog shields `vda_shield` / `vssa_shield` and wells `vnba` / `vpbd`
+- Ideal Verilog behavioral model under `verify/beh_model/` for functional sim
 - Customer cell `CF_AMUX` 59.37 × 78.46 µm (15 µm halo around analog leaf 29.37 × 48.46 µm)
 - Chip PDN is `vpwr` / `vgnd`
 
@@ -95,7 +91,14 @@ supplies onto `analog_io`.
 ## Limitations and Open Issues
 
 - Verilog in `hdl/gl/CF_AMUX.v` is a structural wrap around an empty
-  `CF_AMUX_core` blackbox, not a SPICE-accurate model.
+  `CF_AMUX_core` blackbox. Functional sim uses `verify/beh_model/CF_AMUX_core.v` (ideal model, not SPICE).
 - Liberty is not in this first wrap drop. P&R uses the wrap LEF.
 - Companion GPIO / SIO / VIO pad assemblies stay foundry-only. This
   package ships the working analog-switch integration cell.
+
+## Release History
+
+| Version | Date | Notes |
+|---|---|---|
+| 0.2.0 | 2026-09-06 | First SRAM-style PG-wrapped package. |
+| 0.2.1 | 2026-09-26 | Core fill-exclude covers so fillgen does not overwrite the analog. Ideal behavioral model for functional sim. |

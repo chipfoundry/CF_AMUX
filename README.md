@@ -22,7 +22,7 @@ shields stay wrap ports and are routed as signals.
 
 ```bash
 pip install cf-ipm
-ipm install CF_AMUX --version 0.2.1
+ipm install CF_AMUX --version 0.2.2
 ```
 
 Use `hdl/gl/CF_AMUX.v` as the customer blackbox, `layout/lef/CF_AMUX.lef`
@@ -102,3 +102,4 @@ supplies onto `analog_io`.
 |---|---|---|
 | 0.2.0 | 2026-09-06 | First SRAM-style PG-wrapped package. |
 | 0.2.1 | 2026-09-26 | Core fill-exclude covers so fillgen does not overwrite the analog. Ideal behavioral model for functional sim. |
+| 0.2.2 | 2026-11-07 | Leaf GDS carries wafflefill so pre-merge density passes, and adds the met3 waffleDrop cover. WaffleDrop still keeps chip fill out of the block. |
